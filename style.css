@@ -5,11 +5,58 @@
 nav>ul{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+    padding-left: 0%;
+}
+a{
+    color: black;
+    text-decoration: none;
+    align-items: stretch;
+}
+ul{
+    list-style-type: none;
 }
 header{
+    display: grid;
     border: 1px black solid;
+    grid-template-columns: auto 1fr;
+}
+header>img{
+    align-items: center;
+    height: 4em;
 }
 #trespalt{
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
 }
+nav{
+    border: black solid 1px;
+}
+section{
+    border: black solid 1px;
+}
+ul>li{
+    border: black solid 1px;
+}
+footer{
+    border: black solid 1px;
+}
+main{
+    border: black solid 1px;
+    border-collapse: collapse;
+}
+form{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+form>section{
+    border:none;
+    border-bottom: black solid 1px;
+}
+.tack{
+    border: black solid 1px;
+    border-radius: 20px;
+    font-size: 2em;
+    width: 50%;
+    margin-left: 25%;
+}
+
