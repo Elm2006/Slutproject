@@ -9,6 +9,7 @@
 <body>
     <div class="wrapper">
         <header>
+            <a href="index.html"><img src="img/hus.png" alt="Hem"></a>
             <h1>Namn</h1>
         </header>
         <nav>
@@ -19,66 +20,66 @@
             </ul>
         </nav>
         <main>
-            <form>
+            <form action="thanks.html">
                 <section>
-                    <label>Rubrik:</label>
+                    <label for="frubrik">Rubrik:</label>
                 </section>
                 <section>
-                    <input type="text">
+                    <input type="text" id="frubrik" name="frubrik" required>
                 </section>
                 <section>
-                    <label>Ingress:</label>
+                    <label for="ftext">Text:</label>
                 </section>
                 <section>
-                    <input type="text">
+                    <input type="file" id="ftext" name="ftext" required>
                 </section>
                 <section>
-                    <label>Brödtext:</label>
+                    <label for="fskribent">Skribent:</label>
                 </section>
                 <section>
-                    <input type="text">
+                    <input type="text" id="fskribent" name="skribent" required>
                 </section>
                 <section>
-                    <label>Skribent:</label>
+                    <p>Anonym:</p>
                 </section>
                 <section>
-                    <input type="text">
-                </section>
-                <section>
-                    <label>Anonym:</label>
-                </section>
-                <section>
-                    <input type="checkbox">
+                    <input type="radio" id="fanonym" name="fanonym" value="Ja" required>
                     <label>Ja</label><br>
-                    <input type="checkbox">
+                    <input type="radio" id="fanonym" name="fanonym" value="Nej" required>
                     <label>Nej</label>
                 </section>
                 <section>
                     <label>Ämne:</label>
                 </section>
                 <section>
-                    <input type="radio">
+                    <input type="checkbox" id="f" name="f" value="1">
                     <label></label><br>
-                    <input type="radio">
+                    <input type="checkbox" id="f" name="f" value="2">
                     <label></label><br>
-                    <input type="radio">
+                    <input type="checkbox">
                     <label></label><br>
-                    <input type="radio">
+                    <input type="checkbox">
                     <label></label><br>
-                    <input type="radio">
+                    <input type="checkbox">
                     <label></label>
                 </section>
                 <section>
-                    <label>Synas i Topplista:</label>
+                    <p>Synas i Topplista:</p>
                 </section>
                 <section>
-                    <input type="checkbox">
+                    <input type="radio" id="ftop" name="ftop" value="Ja">
                     <label>Ja</label><br>
-                    <input type="checkbox">
+                    <input type="radio" id="ftop" name="ftop" value="Nej">
                     <label>Nej</label>
                 </section>
                 <section>
-                    <input type="submit">
+                    <labe>Lösenord:</labe>
+                </section>
+                <section>
+                    <input type="password" required>
+                </section>
+                <section>
+                    <input type="submit" value="Skicka">
                 </section>
             </form>
         </main>

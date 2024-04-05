@@ -1,11 +1,7 @@
 .wrapper{
     text-align: center;
     display: grid;
-}
-nav>ul{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    padding-left: 0%;
+    grid-template-rows: 80px auto auto 2px;
 }
 a{
     color: black;
@@ -20,16 +16,15 @@ header{
     border: 1px black solid;
     grid-template-columns: auto 1fr;
 }
-header>img{
-    align-items: center;
-    height: 4em;
-}
-#trespalt{
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+header>a>img{
+    margin:0;
+    width: 2em;
 }
 nav{
     border: black solid 1px;
+}
+nav>ul{
+    padding-left:0;
 }
 section{
     border: black solid 1px;
@@ -51,6 +46,7 @@ form{
 form>section{
     border:none;
     border-bottom: black solid 1px;
+    padding: 1em;
 }
 .tack{
     border: black solid 1px;
@@ -59,4 +55,17 @@ form>section{
     width: 50%;
     margin-left: 25%;
 }
-
+@media (min-width:800px) {
+    header>a>img{
+        align-items: center;
+        width: 4em;
+    }
+    nav>ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    #trespalt{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+}
