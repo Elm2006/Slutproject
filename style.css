@@ -1,7 +1,27 @@
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 25px;
+}
 .wrapper{
     text-align: center;
     display: grid;
-    grid-template-rows: 80px auto auto 2px;
+    grid-template-rows: 80px auto auto 20px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "main"
+    "footer";
+}
+.wrapper2{
+    text-align: center;
+    display: grid;
+    grid-template-rows: 80px auto auto auto 20px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "nav2"
+    "main"
+    "footer";
 }
 a{
     color: black;
@@ -12,15 +32,21 @@ ul{
     list-style-type: none;
 }
 header{
+    grid-area: header;
     display: grid;
     border: 1px black solid;
-    grid-template-columns: auto 1fr;
+    grid-template-columns: auto 10fr 1fr;
 }
 header>a>img{
     margin:0;
     width: 2em;
 }
+h1{
+    margin: auto;
+    text-align: center;
+}
 nav{
+    grid-area: nav;
     border: black solid 1px;
 }
 nav>ul{
@@ -33,9 +59,12 @@ ul>li{
     border: black solid 1px;
 }
 footer{
+    grid-area: footer;
     border: black solid 1px;
+    background-color: grey;
 }
 main{
+    grid-area: main;
     border: black solid 1px;
     border-collapse: collapse;
 }
@@ -55,6 +84,12 @@ form>section{
     width: 50%;
     margin-left: 25%;
 }
+.wrapper2>nav:last-of-type{
+    grid-area: nav2;
+    border: black solid 1px;
+    background-color: gray;
+
+}
 @media (min-width:800px) {
     header>a>img{
         align-items: center;
@@ -67,5 +102,13 @@ form>section{
     #trespalt{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+    }
+    #tvåspalt{
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+    }
+    .wrapper2>nav:last-of-type>ul{
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+        background-color: gray;
     }
 }
