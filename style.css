@@ -118,6 +118,36 @@ caption{
 td{
     height: 2em;
 }
+video{
+    width: 500px;
+    margin-left:10px;
+    margin-right:10px;
+    margin: 10px;
+    border-radius: 50px;
+}
+.scroll{
+    overflow-y: scroll;
+}
+.scroll>section{
+    margin: 20px;
+    display: grid;
+    grid-template-columns: 1fr 10fr;
+}
+.scroll>section>section{
+    border:none;
+}
+h3{
+    margin-top: 5px;
+}
+h4{
+    text-align:right;
+    padding-right: 30px;
+    margin:1px
+}
+section>a>img{
+    height: 30px;
+    width: 30px;
+}
 a:link{
 
 }
@@ -156,5 +186,8 @@ a:active{
     }
     td{
         height: 20px;
+    }
+    video{
+        width: 250px;
     }
 }
