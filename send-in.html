@@ -10,7 +10,7 @@
     <div class="wrapper">
         <header>
             <a href="index.html"><img src="img/hus.png" alt="Hem"></a>
-            <h1>Namn</h1>
+            <h1>Brainstorm</h1>
         </header>
         <nav>
             <ul>
@@ -20,64 +20,79 @@
             </ul>
         </nav>
         <main>
+            <!-- Formulär för att skicka in en idé -->
             <form action="thanks.html" method="post">
+                <!-- Avsnitt för rubrik -->
                 <section>
                     <label for="frubrik">Rubrik:</label>
                 </section>
+                <!-- Avsnitt för att mata in rubrik -->
                 <section>
                     <input type="text" id="frubrik" name="frubrik" required>
                 </section>
+                <!-- Avsnitt för textinmatning -->
                 <section>
                     <label for="ftext">Text:</label>
                 </section>
+                <!-- Avsnitt för att ladda upp en fil -->
                 <section>
                     <input type="file" id="ftext" name="ftext" required>
                 </section>
+                <!-- Avsnitt för att ange skribentens namn -->
                 <section>
                     <label for="fskribent">Skribent:</label>
                 </section>
+                <!-- Avsnitt för att mata in skribentens namn -->
                 <section>
                     <input type="text" id="fskribent" name="skribent" required>
                 </section>
+                <!-- Avsnitt för att välja om idén ska vara anonym eller inte -->
                 <section>
                     <p>Anonym:</p>
                 </section>
                 <section>
+                    <!-- Radioknapp för att välja "Ja" eller "Nej" -->
                     <input type="radio" id="faja" name="fanonym" value="Ja" required>
                     <label>Ja</label><br>
                     <input type="radio" id="fanej" name="fanonym" value="Nej" required>
                     <label>Nej</label>
                 </section>
+                <!-- Avsnitt för att välja ämne för idén -->
                 <section>
                     <label>Ämne:</label>
                 </section>
                 <section>
+                    <!-- Kryssrutor för olika ämnen -->
                     <input type="checkbox" id="fä1" name="fä1" value="1">
-                    <label></label><br>
+                    <label>Informationsteknik</label><br>
                     <input type="checkbox" id="fä2" name="fä2" value="2">
-                    <label></label><br>
-                    <input type="checkbox">
-                    <label></label><br>
-                    <input type="checkbox">
-                    <label></label><br>
-                    <input type="checkbox">
-                    <label></label>
+                    <label>Biomedicinsk teknik</label><br>
+                    <input type="checkbox" id="fä3" name="fä3" value="3">
+                    <label>Miljöteknik</label><br>
+                    <input type="checkbox" id="fä4" name="fä4" value="4">
+                    <label>Mekanisk teknik</label><br>
+                    <input type="checkbox" id="fä5" name="fä5" value="5">
+                    <label>Artificiell intelligens och datavetenskap</label>
                 </section>
+                <!-- Avsnitt för att välja om idén ska visas i topplistan -->
                 <section>
                     <p>Synas i Topplista:</p>
                 </section>
                 <section>
+                    <!-- Radioknapp för att välja "Ja" eller "Nej" -->
                     <input type="radio" id="ftja" name="ftop" value="Ja">
                     <label>Ja</label><br>
                     <input type="radio" id="ftnej" name="ftop" value="Nej">
                     <label>Nej</label>
                 </section>
+                <!-- Avsnitt för att mata in lösenord -->
                 <section>
                     <label>Lösenord:</label>
                 </section>
                 <section>
                     <input type="password" required>
                 </section>
+                <!-- Avsnitt för att skicka in formuläret -->
                 <section>
                     <input type="submit" value="Skicka">
                 </section>
