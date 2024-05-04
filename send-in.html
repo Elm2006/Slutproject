@@ -9,11 +9,11 @@
 <body>
     <div class="wrapper">
         <header>
-            <a href="index.html"><img src="img/hus.png" alt="Hem"></a>
             <h1>Brainstorm</h1>
         </header>
         <nav>
             <ul>
+                <li><a href="index.html"><img src="img/hus.png" alt="Hem"></a></li>
                 <li><a href="send-in.html">Skicka in idé</a></li>
                 <li><a href="idea.html">Inlagda idéer</a></li>
                 <li><a href="toplist.html">Topplista</a></li>
@@ -34,19 +34,16 @@
                 <section>
                     <label for="ftext">Text:</label>
                 </section>
-                <!-- Avsnitt för att ladda upp en fil -->
+                <!-- Avsnitt för att skriva in en text-->
                 <section>
-                    <input type="file" id="ftext" name="ftext" required>
+                    <textarea id="ftext" name="ftext" required></textarea>
                 </section>
-                <!-- Avsnitt för att ange skribentens namn -->
                 <section>
                     <label for="fskribent">Skribent:</label>
                 </section>
-                <!-- Avsnitt för att mata in skribentens namn -->
                 <section>
                     <input type="text" id="fskribent" name="skribent" required>
                 </section>
-                <!-- Avsnitt för att välja om idén ska vara anonym eller inte -->
                 <section>
                     <p>Anonym:</p>
                 </section>
@@ -57,7 +54,6 @@
                     <input type="radio" id="fanej" name="fanonym" value="Nej" required>
                     <label>Nej</label>
                 </section>
-                <!-- Avsnitt för att välja ämne för idén -->
                 <section>
                     <label>Ämne:</label>
                 </section>
@@ -74,7 +70,6 @@
                     <input type="checkbox" id="fä5" name="fä5" value="5">
                     <label>Artificiell intelligens och datavetenskap</label>
                 </section>
-                <!-- Avsnitt för att välja om idén ska visas i topplistan -->
                 <section>
                     <p>Synas i Topplista:</p>
                 </section>
@@ -85,7 +80,6 @@
                     <input type="radio" id="ftnej" name="ftop" value="Nej">
                     <label>Nej</label>
                 </section>
-                <!-- Avsnitt för att mata in lösenord -->
                 <section>
                     <label>Lösenord:</label>
                 </section>

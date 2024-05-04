@@ -2,6 +2,7 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 25px;
+    width: 100%;
 }
 
 /* Centrera innehållet och skapa ett rutnät med olika områden för sidans struktur */
@@ -35,7 +36,7 @@ body {
 /* Definiera utseendet för länkar */
 a {
     display: block;
-    color: hsl(0, 0, 0);
+    color: hsl(0, 0%, 0%);
     text-decoration: none;
     align-items: stretch;
 }
@@ -50,14 +51,12 @@ header {
     grid-area: header;
     display: grid;
     border: 1px rgb(0, 0, 0) solid;
-    grid-template-columns: 2fr 10fr 2fr;
 }
 
 /* Ställ in dimensioner för en bild i sidhuvudet */
-header > a > img {
+li > a > img {
     height: 70px;
     padding-top: 5px;
-    padding-left: 10px;
 }
 
 /* Centrera texten i en rubrik */
@@ -100,7 +99,10 @@ main {
     border: rgb(0, 0, 0) solid 1px;
     border-collapse: collapse;
 }
-
+/*Ändrar strolek på bild en i mig figure*/
+figure>img{
+    width: 500px;
+}
 /* Ställ in dimensioner för knappar */
 [type=submit] {
     height: 5em;
@@ -132,10 +134,14 @@ footer {
 table, td, th {
     border: rgb(0, 0, 0) 1px solid;
     border-collapse: collapse;
-    margin-left: auto;
-    margin-right: auto;
     font-size: 20px;
+    width: 100%;
 }
+
+table tr{
+    overflow-x: scroll;
+}
+
 
 /* Ställ in utseendet för text som beskriver en bild */
 caption {
@@ -226,7 +232,7 @@ a:active {
     /* Anpassa navigationslistans utseende för bredare skärmar */
     nav > ul {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 15fr 15fr 15fr;
     }
 
     /* Anpassa formulärens layout för bredare skärmar */
