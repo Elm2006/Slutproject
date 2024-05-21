@@ -1,29 +1,15 @@
-/* Ange typsnitt och storlek för texten på sidan */
+/* Ange typsnitt, placering av text och storlek för texten på sidan */
 body {
     font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
     font-size: 25px;
     width: 100%;
 }
 
 /* Centrera innehållet och skapa ett rutnät med olika områden för sidans struktur */
 .wrapper {
-    text-align: center;
-    display: grid;
-    grid-template-rows: 80px auto auto 20px;
-    height: 100%;
-    width: 100%;
-    grid-template-areas: 
-    "header"
-    "nav"
-    "main"
-    "footer";
-}
-
-.wrapper2 {
-    text-align: center;
     display: grid;
     grid-template-rows: 80px auto auto auto 20px;
-    height: 100%;
     width: 100%;
     grid-template-areas: 
     "header"
@@ -35,10 +21,10 @@ body {
 
 /* Definiera utseendet för länkar */
 a {
+    /*Gör så att man inte behöver klicka på texten utan kan klicka på en större yta för att ta sig vidare*/
     display: block;
     color: hsl(0, 0%, 0%);
     text-decoration: none;
-    align-items: stretch;
 }
 
 /* Ta bort standardliststil */
@@ -49,8 +35,7 @@ ul {
 /* Definiera utseendet för sidhuvudet med ett rutnät och specifika kolumner */
 header {
     grid-area: header;
-    display: grid;
-    border: 1px rgb(0, 0, 0) solid;
+    border: 1px #000000 solid;
 }
 
 /* Ställ in dimensioner för en bild i sidhuvudet */
@@ -64,9 +49,15 @@ h1 {
     margin: auto;
     text-align: center;
 }
-
+/* Definiera utseendet för en andra navigationspanel */
+nav:last-of-type {
+    grid-area: nav2;
+    border: rgb(0, 0, 0) solid 1px;
+    background-color: rgb(145, 144, 144);
+}
 /* Definiera utseendet för navigationsområdet */
-nav {
+nav:first-of-type{
+    background-color: #ffffff;
     grid-area: nav;
     border: rgb(0, 0, 0) solid 1px;
 }
@@ -97,7 +88,6 @@ footer {
 main {
     grid-area: main;
     border: rgb(0, 0, 0) solid 1px;
-    border-collapse: collapse;
 }
 /*Ändrar strolek på bild en i mig figure*/
 figure>img{
@@ -118,31 +108,12 @@ figure>img{
     margin-left: 25%;
 }
 
-/* Definiera utseendet för en andra navigationspanel */
-.wrapper2 > nav:last-of-type {
-    grid-area: nav2;
-    border: rgb(0, 0, 0) solid 1px;
-    background-color: rgb(145, 144, 144);
-}
-
-/* Ta bort dubbla gränser från sidfoten */
-footer {
-    border-collapse: collapse;
-}
-
 /* Definiera utseendet för tabeller och deras element */
 table, td, th {
     border: rgb(0, 0, 0) 1px solid;
     border-collapse: collapse;
-    font-size: 20px;
-    width: 100%;
+    font-size: 8px;
 }
-
-table tr{
-    overflow-x: scroll;
-}
-
-
 /* Ställ in utseendet för text som beskriver en bild */
 caption {
     text-align: left;
@@ -172,13 +143,13 @@ main > section > section {
 }
 
 /* Definiera utseendet för underrubriker */
-h3 {
+section>section>h2 {
     margin-top: 5px;
     font-size: 30px;
 }
 
 /* Definiera utseendet för specifika rubriker */
-h4 {
+section>section>h3 {
     text-align: right;
     padding-right: 30px;
     margin: 1px;
@@ -229,8 +200,12 @@ a:active {
 
 /* Mediaförfrågan för skärmar som är större än 800px */
 @media (min-width: 800px) {
+    nav:last-of-type> ul{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    }
     /* Anpassa navigationslistans utseende för bredare skärmar */
-    nav > ul {
+    nav:first-of-type > ul {
         display: grid;
         grid-template-columns: 1fr 15fr 15fr 15fr;
     }
@@ -281,6 +256,14 @@ a:active {
         text-align: left;
         padding-left: 20px;
         font-size: 30px;
+    }
+
+    table, td, th {
+        border: rgb(0, 0, 0) 1px solid;
+        border-collapse: collapse;
+        font-size: 20px;
+        /*100% gör så tabellen täcker hela bredden av skärmen*/
+        width: 100%;
     }
 
     /* Justera textstorlek för tabeller för bredare skärmar */
