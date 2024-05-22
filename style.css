@@ -25,6 +25,7 @@ a {
     display: block;
     color: hsl(0, 0%, 0%);
     text-decoration: none;
+    height: 7ex;
 }
 
 /* Ta bort standardliststil */
@@ -89,9 +90,9 @@ main {
     grid-area: main;
     border: rgb(0, 0, 0) solid 1px;
 }
-/*Ändrar strolek på bild en i mig figure*/
+/*Ändrar strolek på bilden i mig figure*/
 figure>img{
-    width: 500px;
+    width: 100%;
 }
 /* Ställ in dimensioner för knappar */
 [type=submit] {
@@ -208,6 +209,9 @@ a:active {
     nav:first-of-type > ul {
         display: grid;
         grid-template-columns: 1fr 15fr 15fr 15fr;
+    }
+    a{
+        height: 6ex;
     }
 
     /* Anpassa formulärens layout för bredare skärmar */
