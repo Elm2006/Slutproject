@@ -1,293 +1,277 @@
 /* Ange typsnitt, placering av text och storlek för texten på sidan */
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    text-align: center;
-    font-size: 25px;
-    width: 100%;
+    font-family: Arial, Helvetica, sans-serif; /* Använder Arial eller ett liknande sans-serif-typsnitt för texten på sidan */
+    text-align: center; /* Centrerar texten på sidan */
+    font-size: 25px; /* Ställer in en grundläggande textstorlek för sidan */
+    width: 100%; /* Sätter bredden på sidan till 100% av förälderelementet */
 }
 
 /* Centrera innehållet och skapa ett rutnät med olika områden för sidans struktur */
 .wrapper {
-    display: grid;
-    grid-template-rows: 80px auto auto auto 20px;
-    width: 100%;
+    display: grid; /* Använder CSS Grid för layouten av sidans struktur */
+    grid-template-rows: 80px auto auto auto 20px; /* Ställer in höjden på de olika raderna i griden */
+    width: 100%; /* Sätter bredden på wrappern till 100% */
     grid-template-areas: 
     "header"
     "nav"
     "nav2"
     "main"
-    "footer";
+    "footer"; /* Namnger och definierar olika områden i griden */
 }
 
 /* Definiera utseendet för länkar */
 a {
-    /*Gör så att man inte behöver klicka på texten utan kan klicka på en större yta för att ta sig vidare*/
-    display: block;
-    color: hsl(0, 0%, 0%);
-    text-decoration: none;
-    height: 7ex;
+    display: block; /* Gör länkar blockelement för att de ska fylla sin förälders bredd */
+    color: hsl(0, 0%, 0%); /* Ställer in färgen på länkarna */
+    text-decoration: none; /* Tar bort understrykning från länkar */
+    height: 7ex; /* Ställer in höjden på länkarna */
 }
 
 /* Ta bort standardliststil */
 ul {
-    list-style-type: none;
+    list-style-type: none; /* Tar bort punktlistans stil från listor */
 }
 
 /* Definiera utseendet för sidhuvudet med ett rutnät och specifika kolumner */
 header {
-    grid-area: header;
-    border: 1px #000000 solid;
+    grid-area: header; /* Placerar sidhuvudet i området "header" */
+    border: 1px #000000 solid; /* Lägger till en tunn svart kant runt sidhuvudet */
 }
 
-/* Ställ in dimensioner för en bild i sidhuvudet */
+/* Ställer in dimensioner för en bild i sidhuvudet */
 li > a > img {
-    height: 70px;
-    padding-top: 5px;
+    height: 70px; /* Ställer in höjden på bilden */
+    padding-top: 5px; /* Lägger till lite padding över bilden */
 }
 
 /* Centrera texten i en rubrik */
 h1 {
-    margin: auto;
-    text-align: center;
+    margin: auto; /* Centrerar rubriken horisontellt */
+    text-align: center; /* Centrerar rubriken texten */
 }
+
 /* Definiera utseendet för en andra navigationspanel */
 nav:last-of-type {
-    grid-area: nav2;
-    border: rgb(0, 0, 0) solid 1px;
-    background-color: rgb(145, 144, 144);
+    grid-area: nav2; /* Placerar andra navigationspanelen i området "nav2" */
+    border: rgb(0, 0, 0) solid 1px; /* Lägger till en svart kant runt andra navigationspanelen */
+    background-color: rgb(145, 144, 144); /* Ställer in bakgrundsfärgen på andra navigationspanelen */
 }
+
 /* Definiera utseendet för navigationsområdet */
 nav:first-of-type{
-    background-color: #ffffff;
-    grid-area: nav;
-    border: rgb(0, 0, 0) solid 1px;
+    background-color: #ffffff; /* Ställer in bakgrundsfärgen på navigationsområdet */
+    grid-area: nav; /* Placerar navigationsområdet i området "nav" */
+    border: rgb(0, 0, 0) solid 1px; /* Lägger till en svart kant runt navigationsområdet */
 }
 
 /* Justera vänstermarginalen för en lista */
 nav > ul {
-    padding-left: 0;
+    padding-left: 0; /* Tar bort vänstermarginalen från listan */
 }
 
 /* Skapa gränser för sektioner */
 section {
-    border: rgb(0, 0, 0) solid 1px;
+    border: rgb(0, 0, 0) solid 1px; /* Lägger till en svart kant runt sektionerna */
 }
 
 /* Skapa gränser för listelement */
 ul > li {
-    border: rgb(0, 0, 0) solid 1px;
+    border: rgb(0, 0, 0) solid 1px; /* Lägger till en svart kant runt listelementen */
 }
 
 /* Definiera utseendet för sidfoten och dess bakgrundsfärg */
 footer {
-    grid-area: footer;
-    border: rgb(0, 0, 0) solid 1px;
-    background-color: rgb(145, 144, 144);
+    grid-area: footer; /* Placerar sidfoten i området "footer" */
+    border: rgb(0, 0, 0) solid 1px; /* Lägger till en svart kant runt sidfoten */
+    background-color: rgb(145, 144, 144); /* Ställer in bakgrundsfärgen på sidfoten */
 }
 
 /* Definiera utseendet för huvudinnehållsområdet */
 main {
-    grid-area: main;
-    border: rgb(0, 0, 0) solid 1px;
+    grid-area: main; /* Placerar huvudinnehållsområdet i området "main" */
+    border: rgb(0, 0, 0) solid 1px; /* Lägger till en svart kant runt huvudinnehållsområdet */
 }
-/*Ändrar strolek på bilden i mig figure*/
+
+/*Ändrar storlek på bilden i figure*/
 figure>img{
-    width: 100%;
+    width: 100%; /* Gör bilden inom figure-elementet fylla dess förälders bredd */
 }
+
 /* Ställ in dimensioner för knappar */
 [type=submit] {
-    height: 5em;
-    width: 10em;
+    height: 5em; /* Ställer in höjden på knapparna */
+    width: 10em; /* Ställer in bredden på knapparna */
 }
 
 /* Definiera utseendet för ett särskilt element med ett tackmeddelande */
 .tack {
-    border: rgb(0, 0, 0) solid 1px;
-    border-radius: 20px;
-    font-size: 2em;
-    width: 50%;
-    margin-left: 25%;
+    border: rgb(0, 0, 0) solid 1px; /* Lägger till en svart kant runt elementet */
+    border-radius: 20px; /* Avrundar hörnen på elementet */
+    font-size: 2em; /* Ställer in textstorleken på tackmeddelandet */
+    width: 50%; /* Sätter bredden på tackmeddelandet */
+    margin-left: 25%; /* Centrerar tackmeddelandet genom att lägga till en vänstermarginal */
 }
 
 /* Definiera utseendet för tabeller och deras element */
 table, td, th {
-    border: rgb(0, 0, 0) 1px solid;
-    border-collapse: collapse;
-    font-size: 8px;
+    border: rgb(0, 0, 0) 1px solid; /* Lägger till en svart kant runt tabeller och deras element */
+    border-collapse: collapse; /* Slår samman tabellcellers kanter */
+    font-size: 8px; /* Ställer in textstorleken i tabeller */
 }
+
 /* Ställ in utseendet för text som beskriver en bild */
 caption {
-    text-align: left;
-    font-size: 50px;
-    font-weight: bold;
+    text-align: left; /* Justerar texten till vänster inuti figure-elementet */
+    font-size: 50px; /* Ställer in textstorleken */
+    font-weight: bold; /* Gör texten fet */
 }
 
 /* Justera höjden för tabellrader */
 td {
-    height: 2em;
+    height: 2em; /* Ställer in höjden på tabellceller */
 }
 
 /* Definiera bakgrundsfärg för ojämna rader i tabeller */
 tr:nth-child(odd) {
-    background-color: rgb(175, 174, 174);
+    background-color: rgb(175, 174, 174); /* Ger ojämna rader en annan bakgrundsfärg */
 }
 
 /* Definiera utseendet för videor */
 video {
-    width: 100%;
-    border-radius: 50px;
+    width: 100%; /* Gör videor fylla sin container horisontellt */
+    border-radius: 50px; /* Avrundar hörnen på videor */
 }
 
 /* Ta bort gränser från en specifik typ av sektioner */
 main > section > section {
-    border: none;
+    border: none; /* Tar bort kanter från specifika sektioner */
 }
 
 /* Definiera utseendet för underrubriker */
 section>section>h2 {
-    margin-top: 5px;
-    font-size: 30px;
+    margin-top: 5px; /* Lägger till en liten marginal över underrubriker */
+    font-size: 30px; /* Ställer in textstorleken för underrubriker */
 }
 
 /* Definiera utseendet för specifika rubriker */
 section>section>h3 {
-    text-align: right;
-    padding-right: 30px;
-    margin: 1px;
-    font-size: 20px;
+    text-align: right; /* Justerar texten till höger */
+    padding-right: 30px; /* Lägger till en högermarginal */
+    margin: 1px; /* Lägger till en liten marginal runt rubriker */
+    font-size: 20px; /* Ställer in textstorleken */
 }
 
 /* Ställ in dimensioner för bilder inuti en sektion */
 section > a > img {
-    height: 30px;
-    width: 30px;
+    height: 30px; /* Ställer in höjden på bilder */
+    width: 30px; /* Ställer in bredden på bilder */
 }
 
 /* Definiera utseendet för dialogrutor */
 dialog {
-    width: 70%;
-    overflow-y: scroll;
+    width: 70%; /* Ställer in bredden på dialogrutor */
+    overflow-y: scroll; /* Lägger till en vertikal scrollbar om innehållet är för långt */
 }
 
 /* Definiera bakgrundsfärgen för dialogbakgrunden */
 dialog::backdrop {
-    background-color: rgba(0, 0, 0, 0.7);
+    background-color: rgba(0, 0, 0, 0.7); /* Ställer in bakgrundsfärgen för dialogbakgrunden */
 }
 
 /* Definiera utseendet för normala länkar */
 a:link {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); /* Ställer in färgen på normala länkar */
 }
 
 /* Definiera utseendet för besökta länkar */
 a:visited {
-    color: rgb(0, 0, 0);
+    color: rgb(0, 0, 0); /* Ställer in färgen på besökta länkar */
 }
 
 /* Definiera utseendet för fokuserade länkar */
 a:focus {
-    color: rgb(12, 105, 0);
+    color: rgb(12, 105, 0); /* Ställer in färgen på fokuserade länkar */
 }
 
 /* Definiera utseendet för länkar när muspekaren är över dem */
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Lägger till understrykning när muspekaren är över länkarna */
 }
 
 /* Definiera utseendet för aktiva länkar */
 a:active {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0); /* Ställer in bakgrundsfärgen för aktiva länkar */
 }
 
 /* Mediaförfrågan för skärmar som är större än 800px */
 @media (min-width: 800px) {
-    nav:last-of-type> ul{
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-    }
     /* Anpassa navigationslistans utseende för bredare skärmar */
     nav:first-of-type > ul {
-        display: grid;
-        grid-template-columns: 1fr 15fr 15fr 15fr;
-    }
-    a{
-        height: 6ex;
+        display: grid; /* Använder CSS Grid för att layouta navigationslistan */
+        grid-template-columns: 1fr 15fr 15fr 15fr; /* Delar upp navigationslistan i kolumner */
     }
 
     /* Anpassa formulärens layout för bredare skärmar */
     form {
-        display: grid;
-        grid-template-columns: 1fr 2fr;
-    }
-
-    /* Anpassa sektionernas layout för bredare skärmar */
-    form > section {
-        border: none;
-        border-bottom: rgb(0, 0, 0) solid 1px;
-        padding: 1em;
-    }
-
-    /* Justera bredden på videor för bredare skärmar */
-    video {
-        width: 500px;
-        margin-left: 10px;
-        margin-right: 10px;
-        margin: 10px;
-        border-radius: 50px;
+        display: grid; /* Använder CSS Grid för att layouta formuläret */
+        grid-template-columns: 1fr 2fr; /* Delar upp formuläret i kolumner */
     }
 
     /* Anpassa layouten för tre spalter för bredare skärmar */
     #trespalt {
-        display: grid;
+        display: grid; /* Använder CSS Grid för att layouta tre spalter */
         grid-template-columns: 1fr 1fr 1fr;
     }
 
     /* Anpassa layouten för två spalter för bredare skärmar */
     main > section {
-        margin: 20px;
-        display: grid;
-        grid-template-columns: 1fr 10fr;
+        margin: 20px; /* Lägger till marginaler runt sektionerna */
+        display: grid; /* Använder CSS Grid för att layouta två spalter */
+        grid-template-columns: 1fr 10fr; /* Delar upp sektionen i kolumner */
     }
 
     /* Anpassa layouten för fem kolumner i den andra navigationspanelen */
     .wrapper2 > nav:last-of-type > ul {
-        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-        background-color: rgb(145, 144, 144);
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr; /* Delar upp den andra navigationspanelen i fem kolumner */
+        background-color: rgb(145, 144, 144); /* Ställer in bakgrundsfärgen på den andra navigationspanelen */
     }
 
     /* Justera utseendet för bildtexter för bredare skärmar */
-    caption {
-        text-align: left;
-        padding-left: 20px;
-        font-size: 30px;
+    caption{
+        text-align: left; /* Justerar texten till vänster */
+        padding-left: 20px; /* Lägger till vänstermarginal */
+        font-size: 30px; /* Ställer in textstorleken */
     }
 
-    table, td, th {
-        border: rgb(0, 0, 0) 1px solid;
-        border-collapse: collapse;
-        font-size: 20px;
-        /*100% gör så tabellen täcker hela bredden av skärmen*/
-        width: 100%;
+    table,
+    td,
+    th {
+        border: rgb(0, 0, 0) 1px solid; /* Lägger till en svart kant runt tabeller och deras element */
+        border-collapse: collapse; /* Slår samman tabellcellers kanter */
+        font-size: 20px; /* Ställer in textstorleken i tabeller */
+        width: 100%; /* Bredden på tabellen täcker hela förälderelementets bredd */
     }
 
-    /* Justera textstorlek för tabeller för bredare skärmar */
-    th, td {
-        font-size: 20px;
+    /* Justera textstorleken för tabeller för bredare skärmar */
+    th,
+    td {
+        font-size: 20px; /* Ställer in textstorleken för tabellrubriker och celler */
     }
 
     /* Justera höjden på tabellceller för bredare skärmar */
     td {
-        height: 20px;
+        height: 20px; /* Ställer in höjden på tabellceller */
     }
 
     /* Justera vänster- och högermarginalen för tabellceller */
-    td, th {
-        padding-left: 10px;
-        padding-right: 10px;
+    td,
+    th {
+        padding-left: 10px; /* Lägger till en vänstermarginal för tabellrubriker och celler */
+        padding-right: 10px; /* Lägger till en högermarginal för tabellrubriker och celler */
     }
 
     /* Justera bredden på videor för bredare skärmar */
     video {
-        width: 250px;
+        width: 250px; /* Ställer in bredden på videor */
     }
 }

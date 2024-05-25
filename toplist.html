@@ -4,15 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Topplista</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Länk till extern CSS-fil för att styla sidan -->
 </head>
 <body>
     <div class="wrapper">
         <header>
-            <h1>Brainstorm</h1>
+            <h1>Brainstorm</h1> <!-- Rubrik för webbplatsen -->
         </header>
         <nav>
             <ul>
+                <!-- Navigationsmeny med länkar till olika sidor -->
                 <li><a href="index.html"><img src="img/hus.png" alt="Hem"></a></li>
                 <li><a href="send-in.html">Skicka in idé</a></li>
                 <li><a href="idea.html">Inlagda idéer</a></li>
@@ -20,15 +21,12 @@
             </ul>
         </nav>
         <main>
-            <!--Skapar tabel-->
+            <!-- En tabell som visar topplistan -->
             <table>
-                <!--Rubrik för tabelen-->
-                <caption>Topplista</caption>
-                <!--(kroppen) för tabelen-->
-                    <!--Tabelrad-->
+                <caption>Topplista</caption> <!-- Rubrik för tabellen -->
                 <thead>
                     <tr>
-                        <!--Tabel huvudcell-->
+                        <!-- Rubriker för tabellkolumnerna -->
                         <th>Antal skrivna texter</th>
                         <th>Skribent</th>
                         <th>Antal Informationsteknik</th>
@@ -39,15 +37,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    <!-- Tabellrader med data för varje skribent och ämne -->
+                    <!-- Exempelrad: -->
                     <tr>
-                        <!--Tabel cell-->
-                        <td>1</td>
-                        <td>Emilia Andersson</td>
-                        <td>1</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
-                        <td>0</td>
+                        <td>1</td> <!-- Antal skrivna texter -->
+                        <td>Emilia Andersson</td> <!-- Skribentens namn -->
+                        <td>1</td> <!-- Antal bidrag inom Informationsteknik -->
+                        <td>0</td> <!-- Antal bidrag inom Biomedicinsk teknik -->
+                        <td>0</td> <!-- Antal bidrag inom Miljöteknik -->
+                        <td>0</td> <!-- Antal bidrag inom Mekanisk teknik -->
+                        <td>0</td> <!-- Antal bidrag inom Artificiell intelligens och datavetenskap -->
                     </tr>
                     <tr>
                         <td>1</td>
@@ -131,7 +130,7 @@
                         <td>1</td>
                     </tr>
                 </tbody>
-                <tfoot>                   
+                <tfoot>
                 </tfoot>
             </table>
         </main>
